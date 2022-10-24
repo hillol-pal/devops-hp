@@ -13,7 +13,7 @@ public class DevopsService {
 	public List<DevopsServiceDetail> getServices() {
 		
 		DevopsServiceDetail serv1=new DevopsServiceDetail(1,"Jenkins","CI");
-		DevopsServiceDetail serv2=new DevopsServiceDetail(1,"Terraform","IOAutomation");
+		DevopsServiceDetail serv2=new DevopsServiceDetail(2,"Terraform","IOAutomation");
 		
 		List<DevopsServiceDetail> services =  new ArrayList<DevopsServiceDetail>();
 		services.add(serv1);
@@ -25,7 +25,16 @@ public class DevopsService {
 
 	public DevopsServiceDetail getService(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		if(id==1) {
+			
+			DevopsServiceDetail serv=new DevopsServiceDetail(1,"Jenkins","CI");
+			return serv;
+			
+		}else {
+			
+			DevopsServiceDetail serv=new DevopsServiceDetail(2,"Terraform","IOAutomation");
+			return serv;
+		}
 	}
 
 	
